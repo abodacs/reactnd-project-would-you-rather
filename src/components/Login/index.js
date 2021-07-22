@@ -7,6 +7,8 @@ class Login extends Component {
   constructor(props) {
     super(props)
     this.state = { userId: null, toHome: false }
+    this.handleLogin = this.handleLogin.bind(this)
+    this.handleUserSelectionChanged = this.handleUserSelectionChanged.bind(this)
   }
 
   componentDidMount() {

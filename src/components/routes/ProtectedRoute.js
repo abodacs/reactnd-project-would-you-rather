@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/jsx-no-bind */
 import React from "react"
 import { Route, Redirect, withRouter } from "react-router-dom"
 import { connect } from "react-redux"
