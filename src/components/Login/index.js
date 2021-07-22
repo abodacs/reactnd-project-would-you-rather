@@ -63,7 +63,6 @@ class Login extends Component {
                   <select
                     className="block w-full mt-1"
                     defaultValue={selected}
-                    value={selected}
                     onChange={(event) => this.handleUserSelectionChanged(event)}
                   >
                     <option value="-1" disabled>

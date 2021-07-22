@@ -12,9 +12,12 @@ const AnswerOption = (props) => {
         ) : null}
       </li>
       <div>
-        <div className="bg-white rounded-lg w-72 shadow block p-4 m-auto">
+        <div className="bg-white rounded-lg w-72 block p-4 m-auto">
           <div className="w-full h-4 bg-gray-400 rounded-full mt-3">
-            <div className="w-3/4 h-full text-center text-xs text-white bg-green-500 rounded-full">
+            <div
+              style={{ width: `${optionPercent}%` }}
+              className="h-full text-center text-xs text-white bg-green-500 rounded-full"
+            >
               {`${optionPercent}%`}
             </div>
           </div>

@@ -21,9 +21,9 @@ class AnswerPanel extends PureComponent {
     const optionTwoPercent = Math.round((totalOptionTwoVotes / totalVotes) * 100)
 
     return (
-      <div className="shadow-lg rounded-xl w-full md:w-72 p-4 bg-white dark:bg-gray-800 relative overflow-hidden">
-        <div className="w-full h-full block">
-          <div className="w-full flex items-center">
+      <div className="rounded-lg shadow-lg overflow-hidden mb-4">
+        <div className="px-6 py-8 bg-white dark:bg-gray-800 sm:p-10 sm:pb-6">
+          <div className="flex justify-center">
             <span className="block relative">
               <img
                 alt={`avatar of ${name}`}
@@ -36,23 +36,23 @@ class AnswerPanel extends PureComponent {
               <span className="text-gray-400 text-sm dark:text-gray-300">
                 {formatDate(timestamp)}
               </span>
+              <div className="flex items-center justify-between my-2">
+                <ul>
+                  <AnswerOption
+                    option={optionOne}
+                    optionPercent={optionOnePercent}
+                    authedUser={authedUser}
+                    totalVotes={totalVotes}
+                  />
+                  <AnswerOption
+                    option={optionTwo}
+                    optionPercent={optionTwoPercent}
+                    authedUser={authedUser}
+                    totalVotes={totalVotes}
+                  />
+                </ul>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center justify-between my-2">
-            <ul>
-              <AnswerOption
-                option={optionOne}
-                optionPercent={optionOnePercent}
-                authedUser={authedUser}
-                totalVotes={totalVotes}
-              />
-              <AnswerOption
-                option={optionTwo}
-                optionPercent={optionTwoPercent}
-                authedUser={authedUser}
-                totalVotes={totalVotes}
-              />
-            </ul>
           </div>
         </div>
       </div>
